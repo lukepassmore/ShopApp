@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>My Shoppe</string>
+	<string>Yellow Box</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.refractored.myshoppe</string>
 	<key>CFBundleShortVersionString</key>
@@ -56,10 +56,5 @@
 	<true/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
-	<array>
-    <string>Font Awesome 5 Brands-Regular-400.otf</string>
-    <string>Font Awesome 5 Free-Regular-400.otf</string>
-    <string>Font Awesome 5 Free-Solid-900.otf</string>
-</array>
 </dict>
 </plist>
