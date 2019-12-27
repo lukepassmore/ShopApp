@@ -6,7 +6,7 @@ using Xamarin.Essentials;
 
 namespace MyShop
 {
-    public class StoreViewModel : ViewModelBase
+    public class ProductViewModel : ViewModelBase
     {
         public Store Store { get; set; }
         public string Monday { get { return string.Format("{0} - {1}", Store.MondayOpen, Store.MondayClose); } }
@@ -21,7 +21,7 @@ namespace MyShop
         public string Address1 { get { return Store.StreetAddress; } }
         public string Address2 { get { return string.Format("{0}, {1} {2}", Store.City, Store.State, Store.ZipCode); } }
 
-        public StoreViewModel(Store store, Page page) : base(page)
+        public ProductViewModel(Store store, Page page) : base(page)
         {
             this.Store = store;
         }

@@ -2,7 +2,7 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="MyShop.FeedbackPage"
+	x:Class="MyShop.ImageSubmitPage"
     xmlns:design="clr-namespace:MyShop;assembly=MyShop"
     BindingContext="{x:Static design:ViewModelLocator.FeedbackViewModel}"
 	Title="{Binding Title}"

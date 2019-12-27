@@ -244,15 +244,6 @@
     <BundleResource Include="Resources\hexagonsmall.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\hero%402x.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\hero.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\herotablet.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -6,10 +6,10 @@ using static System.DateTime;
 
 namespace MyShop
 {
-    public class FeedbackViewModel : ViewModelBase
+    public class ImageSubmitViewModel : ViewModelBase
     {
         IDataStore dataStore;
-        public FeedbackViewModel(Page page) : base(page)
+        public ImageSubmitViewModel(Page page) : base(page)
         {
             dataStore = DependencyService.Get<IDataStore>();
             Title = "Leave Feedback";
@@ -26,9 +26,9 @@ namespace MyShop
                 return await dataStore.GetStoresAsync() ?? new List<Store>();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await page.DisplayAlert("Uh Oh :(", "Unable to gather stores.", "OK");
+                await page.DisplayAlert("Error", "Unable to gather stores.", "OK");
             }
             finally
             {
@@ -55,7 +55,7 @@ namespace MyShop
 
             if (string.IsNullOrWhiteSpace(Text))
             {
-                await page.DisplayAlert("Enter Feedback", "Please enter some feedback for our team.", "OK");
+                await page.DisplayAlert("Error", "Please enter some feedback for our team.", "OK");
                 return;
             }
 
@@ -78,9 +78,9 @@ namespace MyShop
                     RequiresCall = RequiresCall,
                 });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                await page.DisplayAlert("Uh Oh :(", "Unable to save feedback, please try again.", "OK");
+                await page.DisplayAlert("Error", "Unable to save feedback, please try again.", "OK");
             }
             finally
             {

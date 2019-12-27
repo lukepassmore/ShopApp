@@ -6,14 +6,14 @@ using Xamarin.Forms.Maps;
 
 namespace MyShop
 {
-    public partial class StorePage : ContentPage
+    public partial class ProductPage : ContentPage
     {
-        StoreViewModel viewModel;
-        public StorePage(Store store)
+        ProductViewModel viewModel;
+        public ProductPage(Store store)
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new StoreViewModel(store, this);
+            BindingContext = viewModel = new ProductViewModel(store, this);
 
             if(Device.RuntimePlatform != Device.UWP)
             {

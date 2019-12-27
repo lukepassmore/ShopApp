@@ -1,5 +1,4 @@
-﻿using MyShop.Views.Tablet;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -13,24 +12,24 @@ namespace MyShop
             InitializeComponent();
             BindingContext = new HomeViewModel(this);
 
-            BtnForum.Clicked += async (sender, e) =>
+            /*BtnForum.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new ForumPage());
-            };
+            };*/
             BtnProducts.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new ProductsPage());
             };
-
+            /*
             BtnLocations.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new LocationsPage());
-            };
-            BtnImgSubmit.Clicked += async (sender, e) =>
+            };*/
+            BtnImageSubmit.Clicked += async (sender, e) =>
             {
-                await Navigation.PushAsync(new BtnImgSubmitPage());
+                await Navigation.PushAsync(new ImageSubmitPage());
             };
-
+            /*
             BtnLocalEvents.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new LocalEventsPage());
@@ -38,7 +37,7 @@ namespace MyShop
             BtnCalculations.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new CalculationsPage());
-            };
+            };*/
         }
     }
 }

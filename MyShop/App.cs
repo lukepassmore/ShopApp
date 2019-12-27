@@ -9,33 +9,33 @@ namespace MyShop
     {
 	static bool UseDesignTime => false;
 
-        static FeedbackViewModel feedbackVM;
+        static ImageSubmitViewModel feedbackVM;
 
-        public static FeedbackViewModel FeedbackViewModel
-        => feedbackVM ?? (feedbackVM = new FeedbackViewModel(null));
+        public static ImageSubmitViewModel ImageSubmitViewModel
+        => feedbackVM ?? (feedbackVM = new ImageSubmitViewModel(null));
 
 
-        static StoresViewModel storesViewModel;
+        static ProductsViewModel productsViewModel;
 
-        public static StoresViewModel StoresViewModel
+        public static ProductsViewModel ProductsViewModel
         {
             get
             {
 		    if(!UseDesignTime)
 			    return null;
 		    
-                if (storesViewModel != null)
-                    return storesViewModel;
+                if (productsViewModel != null)
+                    return productsViewModel;
                               
-                storesViewModel = new StoresViewModel(null);
-                storesViewModel.GetStoresCommand.Execute(null);
-                return storesViewModel;
+                productsViewModel = new ProductsViewModel(null);
+                productsViewModel.GetStoresCommand.Execute(null);
+                return productsViewModel;
             }
         }
 
-        static StoreViewModel storeViewModel;
+        static ProductViewModel productViewModel;
 
-        public static StoreViewModel StoreViewModel
+        public static ProductViewModel ProductViewModel
         { 
             get
             {
@@ -43,32 +43,30 @@ namespace MyShop
 		    if(!UseDesignTime)
 			    return null;
 		    
-                if (storeViewModel != null)
-                    return storeViewModel;
+                if (productViewModel != null)
+                    return productViewModel;
 
                 var offline = new OfflineDataStore();
                 var task = offline.GetStoresAsync();
                 task.Wait();
                 var store = task.Result.First();
-                storeViewModel = new StoreViewModel(store, null);
-                return storeViewModel;
+                productViewModel = new ProductViewModel(store, null);
+                return productViewModel;
             }
         }
 
     }
     public class App : Application
-	{
-		public App ()
-		{
-			// The root page of your application
-			MainPage = new NavigationPage(new HomePage())
-			{
-				BarTextColor = Color.White,
-                BarBackgroundColor = Color.FromHex("#2B84D3")
-			};
-		}
+    {
+        public App() =>
+            // The root page of your application
+            MainPage = new NavigationPage(new HomePage())
+            {
+                BarTextColor = Color.White,
+                BarBackgroundColor = Color.FromHex("#f4c031")
+            };
 
-		protected override void OnStart ()
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

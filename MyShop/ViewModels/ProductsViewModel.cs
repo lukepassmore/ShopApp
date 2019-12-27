@@ -7,15 +7,15 @@ using MvvmHelpers;
 
 namespace MyShop
 {
-    public class StoresViewModel : ViewModelBase
+    public class ProductsViewModel : ViewModelBase
     {
         readonly IDataStore dataStore;
         public ObservableRangeCollection<Store> Stores { get; set; }
         public ObservableRangeCollection<Grouping<string, Store>> StoresGrouped { get; set; }
         public bool ForceSync { get; set; }
-        public StoresViewModel(Page page) : base(page)
+        public ProductsViewModel(Page page) : base(page)
         {
-            Title = "Locations";
+            Title = "Products";
             dataStore = DependencyService.Get<IDataStore>();
             Stores = new ObservableRangeCollection<Store>();
             StoresGrouped = new ObservableRangeCollection<Grouping<string, Store>>();
@@ -35,7 +35,7 @@ namespace MyShop
 
                 if (ItemSelected == null)
                 {
-                    page.Navigation.PushAsync(new StorePage(selectedStore));
+                    page.Navigation.PushAsync(new ProductPage(selectedStore));
                     SelectedStore = null;
                 }
                 else
@@ -116,7 +116,7 @@ namespace MyShop
 
                 Sort();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 showAlert = true;
 

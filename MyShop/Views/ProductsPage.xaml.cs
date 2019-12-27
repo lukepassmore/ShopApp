@@ -5,18 +5,18 @@ using Xamarin.Forms;
 
 namespace MyShop
 {
-    public partial class StoresPage : ContentPage
+    public partial class ProductsPage : ContentPage
     {
-        StoresViewModel viewModel;
+        ProductsViewModel viewModel;
         public Action<Store> ItemSelected
         {
             get { return viewModel.ItemSelected; }
             set { viewModel.ItemSelected = value; }
         }
-        public StoresPage()
+        public ProductsPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new StoresViewModel(this);
+            BindingContext = viewModel = new ProductsViewModel(this);
 
             /*if (Device.RuntimePlatform == Device.WinPhone || (Device.RuntimePlatform == Device.UWP && Device.Idiom == TargetIdiom.Phone))
             {

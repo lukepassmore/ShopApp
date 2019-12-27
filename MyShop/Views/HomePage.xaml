@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
@@ -6,13 +6,10 @@
 	Title="{Binding Title}"
 	IsBusy="{Binding IsBusy}">
 	<ContentPage.Content>
-		<Grid Padding="10" RowSpacing="10" ColumnSpacing="10" Height="100">
+		<Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="50%"/>
-			</Grid.ColumnDefinitions>
 			<Button 
 				x:Name="BtnForum"
 				Grid.Row="1"
@@ -20,6 +17,7 @@
 				BorderRadius="5"
 				TextColor="White" 
 				Text="Forum"/>
+<<<<<<< HEAD
 				   <!-- <Label Text="&#xf00c;" 
 				   FontSize="50"
 				   TextColor="SkyBlue"
@@ -34,6 +32,9 @@
 									</Label.FontFamily>
 					</Label>-->
             <Button 
+=======
+			<Button 
+>>>>>>> 19b5561... AndroidManifestUpdate
 				x:Name="BtnProducts"
 				Grid.Row="1"
 				Grid.Column="1"

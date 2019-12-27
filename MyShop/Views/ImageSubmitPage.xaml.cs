@@ -5,13 +5,13 @@ using Xamarin.Forms;
 
 namespace MyShop
 {
-    public partial class FeedbackPage : ContentPage
+    public partial class ImageSubmitPage : ContentPage
     {
-        FeedbackViewModel viewModel;
-        public FeedbackPage()
+        ImageSubmitViewModel viewModel;
+        public ImageSubmitPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new FeedbackViewModel(this);
+            BindingContext = viewModel = new ImageSubmitViewModel(this);
 
 
             PickerRating.SelectedIndex = 10;
@@ -34,13 +34,13 @@ namespace MyShop
                 foreach (var store in stores)
                     PickerStore.Items.Add(store.Name);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 showAlert = true;
             }
             if (showAlert)
-                await DisplayAlert("Uh oh :(", "Unable to get locations, don't worry you can still submit feedback.", "OK");
+                await DisplayAlert("Error", "Unable to get locations, don't worry you can still submit feedback.", "OK");
 
 
         }
