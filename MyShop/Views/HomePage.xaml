@@ -20,7 +20,20 @@
 				BorderRadius="5"
 				TextColor="White" 
 				Text="Forum"/>
-			<Button 
+            <Label Text="&#xf00c;" 
+           FontSize="50"
+           TextColor="SkyBlue"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" >
+                <Label.FontFamily>
+                    <OnPlatform 
+ x:TypeArguments="x:String"
+ Android="Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free Regular" 
+ iOS="Font Awesome 5 Free" 
+ WinPhone="Assets/Font Awesome 5 Free-Regular-400.otf#Font Awesome 5 Free" />
+                </Label.FontFamily>
+            </Label>
+            <Button 
 				x:Name="BtnProducts"
 				Grid.Row="1"
 				Grid.Column="1"
