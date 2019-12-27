@@ -12,22 +12,32 @@ namespace MyShop
         {
             InitializeComponent();
             BindingContext = new HomeViewModel(this);
-            ButtonFindStore.Clicked += async (sender, e) =>
+
+            BtnForum.Clicked += async (sender, e) =>
             {
-                if (Device.Idiom == TargetIdiom.Tablet || Device.Idiom == TargetIdiom.Desktop)
-                    await Navigation.PushAsync(new StoresTabletPage());
-                else
-                    await Navigation.PushAsync(new StoresPage());
+                await Navigation.PushAsync(new ForumPage());
+            };
+            BtnProducts.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new ProductsPage());
             };
 
-            if (Device.Idiom == TargetIdiom.Tablet)
+            BtnLocations.Clicked += async (sender, e) =>
             {
-                HeroImage.Source = ImageSource.FromFile("herotablet.jpg");
-            }
+                await Navigation.PushAsync(new LocationsPage());
+            };
+            BtnImgSubmit.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new BtnImgSubmitPage());
+            };
 
-            ButtonLeaveFeedback.Clicked += async (sender, e) =>
+            BtnLocalEvents.Clicked += async (sender, e) =>
             {
-                await Navigation.PushAsync(new FeedbackPage());
+                await Navigation.PushAsync(new LocalEventsPage());
+            };
+            BtnCalculations.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new CalculationsPage());
             };
         }
     }

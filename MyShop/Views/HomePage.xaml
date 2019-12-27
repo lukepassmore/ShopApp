@@ -5,39 +5,61 @@
 	x:Class="MyShop.HomePage"
 	Title="{Binding Title}"
 	IsBusy="{Binding IsBusy}">
-	<ContentPage.Content Padding="0">
-		<Grid RowSpacing="0" ColumnSpacing="0">
+	<ContentPage.Content>
+		<Grid Padding="10" RowSpacing="10" ColumnSpacing="10" Height="100">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="*"/>
-				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="auto"/>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="50%"/>
 			</Grid.ColumnDefinitions>
-
-      <Image
-                x:Name="HeroImage"
-                Grid.ColumnSpan="2"
-				Source="hero.jpg"
-                Aspect="AspectFill"
-				HorizontalOptions="FillAndExpand"
-				VerticalOptions ="FillAndExpand"/>
 			<Button 
-				x:Name="ButtonFindStore"
+				x:Name="BtnForum"
 				Grid.Row="1"
-				BackgroundColor="#3498DB"
-				BorderRadius="0"
+				BackgroundColor="#f4c031"
+				BorderRadius="5"
+				TextColor="White" 
+				Text="Forum"/>
+			<Button 
+				x:Name="BtnProducts"
+				Grid.Row="1"
+				Grid.Column="1"
+				BackgroundColor="#f4c031" 
+				BorderRadius="5"
+				TextColor="White"
+				Text="Products"/>
+
+            <Button 
+				x:Name="BtnLocations"
+				Grid.Row="2"
+				BackgroundColor="#f4c031"
+				BorderRadius="5"
 				TextColor="White" 
 				Text="Locations"/>
 			<Button 
-				x:Name="ButtonLeaveFeedback"
-				Grid.Row="1"
+				x:Name="BtnImageSubmit"
+				Grid.Row="2"
 				Grid.Column="1"
-				BackgroundColor="#81C134" 
-				BorderRadius="0"
+				BackgroundColor="#f4c031" 
+				BorderRadius="5"
 				TextColor="White"
-				Text="Leave Feedback"/>
+				Text="Image Submit"/>
+
+            <Button 
+				x:Name="BtnLocalEvents"
+				Grid.Row="3"
+				BackgroundColor="#f4c031"
+				BorderRadius="5"
+				TextColor="White" 
+				Text="Local Events"/>
+			<Button 
+				x:Name="BtnCalculations"
+				Grid.Row="3"
+				Grid.Column="1"
+				BackgroundColor="#f4c031" 
+				BorderRadius="5"
+				TextColor="White"
+				Text="Calculations"/>
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>
