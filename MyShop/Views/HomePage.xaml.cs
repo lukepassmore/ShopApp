@@ -7,6 +7,7 @@ namespace MyShop
 {
     public partial class HomePage : ContentPage
     {
+
         public HomePage()
         {
             InitializeComponent();
@@ -15,7 +16,7 @@ namespace MyShop
             /*BtnForum.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new ForumPage());
-            };*/
+            }
             BtnProducts.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new ProductsPage());

@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Yellow Box</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.refractored.myshoppe</string>
+	<string>com.yellowbox.app</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.2</string>
 	<key>CFBundleVersion</key>
